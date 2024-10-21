@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Box</title>
+  
+  <!--Linking Stylesheets-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="displayGreeting()">
+  <!--Greeting-->
+  <span id="greeting" class="greeting"></span>
+  
+  <!--For theme implementations-->
+  <button id="dark-btn" class="theme-btn" onclick="darkTheme()"><img src="dark.svg" alt="Dark" width="25" height="25"></button>
+  <button id="light-btn" class="theme-btn hide" onclick="lightTheme()"><img src="light.svg" alt="Light" width="25" height="25"></button>
+  
+  <h1 id="name"><a href="index.html">Box</a></h1>
+  <p id="writeup" class="writeup">Keep track of your day 2 day activities. 🙌</p>
+  
+  <section id="todos" class="todos">
+    <ul id="lists"></ul>
+  </section>
+  
+  <section id="note" class="note">
+    <h3>No task added yet!</h3>
+  </section>
+  
+  <section id="task-adder" class="task-adder">
+    <button class="hide-btn" onclick="hideTaskAdder()">X</button>
+    <h2>Add a Task 🙌</h2>
+    <p>Fill in some details of your task.</p>
+    <input type="text" id="task-name" class="input" placeholder="Task Name">
+    <textarea id="task-desc" class="input" placeholder="Task Description"></textarea>
+    <span class="date-inputs">
+    <span>Set time for task accomplishment.</span>
+    <input class="date" type="date" id="date">
+    </span>
+    <button class="add-taskbtn" onclick="addTask()">Add Task</button>
+  </section>
+  
+  <button id="addButton" class="add-btn" onclick="showTaskAdder()">+</button>
+  
+  <!--Loading Scripts-->
+  <script src="index.js"></script>
+</body>
+
+</html>

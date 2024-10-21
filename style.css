@@ -1,0 +1,287 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap");
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  /* TYPOGRAPHY */
+  --ff: "Afacad Flux", sans-serif;
+  --pacifico: "Pacifico", sans-serif;
+  
+  /* COLOR */
+  --color: black;
+  --bgcolor: white;
+  --namecolor: linear-gradient(to right, skyblue, black);
+  --tskadderbgc: linear-gradient(to right, skyblue, blue);
+  --btncolor: deepskyblue;
+  
+  /* SIZES */
+}
+
+/* ELEMENTS STYLES */
+body {
+  font-family: var(--ff);
+  font-size: 1rem;
+  background-color: var(--bgcolor);
+  color: var(--color);
+  margin: 2rem;
+}
+
+h1 {
+  font-family: var(--pacifico);
+  font-size: 4.5rem;
+  font-weight: bolder;
+  background: var(--namecolor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1.5px;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: var(--pacifico);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+h3 {
+  font-family: var(--pacifico);
+  text-align: center;
+  margin: 3rem;
+}
+
+textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+}
+
+/* CLASS STYLES */
+.writeup {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color);
+}
+
+.todos {
+  width: 99%;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 3px solid deepskyblue;
+  border-top: 5px solid purple;
+  border-bottom: 5px solid black;
+  border-radius: 2rem;
+  display: none;
+}
+
+.todo {
+  font-size: 1.3rem;
+  padding: 20px;
+  width: 70%;
+  margin: 1rem auto;
+  border: 2px solid lightgrey;
+  border-radius: 0.80rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo-date {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 0.60rem;
+  margin-top: 0.80rem;
+}
+
+.todo:hover, .todo:active, .todo:focus {
+  border: 5px solid darkred;
+}
+
+.add-btn {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  background: var(--btncolor);
+  border: thin solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.add-btn:hover, .add-btn:active, .add-btn:focus {
+  transform: scale(120%);
+}
+
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border: thin solid grey;
+  border-radius: 50%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.greeting {
+  font-family: var(--pacifico);
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: black;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.task-adder {
+  display: none;
+  color: black;
+  background: lightgray;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+.task-adder p {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.input {
+  font: inherit;
+  text-align: center;
+  width: 75%;
+  height: 50px;
+  margin: 2rem auto;
+  border: thin solid gray;
+  border-radius: 0.80rem;
+  display: block;
+}
+
+.add-taskbtn {
+  font: inherit;
+  font-weight: bolder;
+  background-color: deepskyblue;
+  border: 3px solid gray;
+  border-radius: 2rem;
+  width: 150px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  cursor: pointer;
+}
+
+.add-taskbtn:hover, .add-taskbtn:active, .add-taskbtn:focus {
+  border: 4.5px solid darkred;
+}
+
+.date-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.date-inputs span {
+  font-weight: bolder;
+  margin: 15px;
+}
+
+.date {
+  font: inherit;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 0.90rem;
+}
+
+.hide-btn {
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border: 5px solid darkred;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.delete-btn {
+  width: 60px;
+  height: 40px;
+  background-color: lightgrey;
+  border: thin solid grey;
+  border-radius: 0.70rem;
+  margin-left: 10%;
+  margin-right: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid darkred;
+  border-radius: 0.70rem;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.flx { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  transition: 1s ease all;
+}
+
+.disabled {
+  opacity: 0.30;
+  font-size: 0.85rem;
+}
